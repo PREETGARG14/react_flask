@@ -1,5 +1,5 @@
 from flask import jsonify
-from backend.src import app
+from src import app
 
 from datetime import datetime, timedelta
 import hashlib, jwt, werkzeug
