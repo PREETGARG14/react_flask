@@ -1,0 +1,10 @@
+certifi==2021.10.8
+click==8.0.3
+Flask
+Flask-SQLAlchemy==2.5.1
+greenlet==1.1.2
+itsdangerous
+Jinja2
+MarkupSafe
+SQLAlchemy==1.4.27
+Werkzeug
