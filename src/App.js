@@ -4,10 +4,10 @@ import './App.css';
 import Login from './components/Login';
 
 function App() {
-  const [alreadyuser, setAlreadyUser] = useState(false);
+  const [notuser, setNotUser] = useState(true);
   return (
     <div className='app'>
-      {alreadyuser ? <Login /> : <Register setAlreadyUser={setAlreadyUser} />}
+      {notuser ? <Login setNotUser={setNotUser} /> : <Register />}
     </div>
   );
 }
