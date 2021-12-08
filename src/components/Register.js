@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './Register.css';
 
-const Register = ({ setAlreadyUser }) => {
+const Register = () => {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [username, setUsername] = useState('');
@@ -33,10 +33,6 @@ const Register = ({ setAlreadyUser }) => {
     console.log('clicked');
   };
 
-  const handleAlreadyUserSubmit = (e) => {
-    e.preventDefault();
-    setAlreadyUser(true);
-  };
   return (
     <div className='contaniner'>
       <h2>Register</h2>
@@ -66,9 +62,6 @@ const Register = ({ setAlreadyUser }) => {
       />
       <button type='subimt' className='btn' onClick={handleSubmit}>
         Submit
-      </button>
-      <button type='submit' className='btn' onClick={handleAlreadyUserSubmit}>
-        Already a user?
       </button>
     </div>
   );
