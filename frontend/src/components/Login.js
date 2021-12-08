@@ -1,25 +1,12 @@
 import React, { useState } from 'react';
-import './Register.css';
 
-const Register = ({ setAlreadyUser }) => {
-  const [name, setName] = useState('');
+const Login = () => {
   const [email, setEmail] = useState('');
-  const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
-
-  const handleNameChange = (e) => {
-    e.preventDefault();
-    setName(e.target.value);
-  };
 
   const handleEmailChange = (e) => {
     e.preventDefault();
     setEmail(e.target.value);
-  };
-
-  const handleUsernameChange = (e) => {
-    e.preventDefault();
-    setUsername(e.target.value);
   };
 
   const handlePasswordChange = (e) => {
@@ -33,31 +20,17 @@ const Register = ({ setAlreadyUser }) => {
     console.log('clicked');
   };
 
-  const handleAlreadyUserSubmit = (e) => {
-    e.preventDefault();
-    setAlreadyUser(true);
-  };
   return (
     <div className='contaniner'>
-      <h2>Register</h2>
-      <input
-        placeholder='Name'
-        type='text'
-        value={name}
-        onChange={handleNameChange}
-      />
+      <h2>Login</h2>
+
       <input
         placeholder='Email'
         type='email'
         value={email}
         onChange={handleEmailChange}
       />
-      <input
-        placeholder='Username'
-        type='text'
-        value={username}
-        onChange={handleUsernameChange}
-      />
+
       <input
         placeholder='Password'
         type='password'
@@ -67,11 +40,8 @@ const Register = ({ setAlreadyUser }) => {
       <button type='subimt' className='btn' onClick={handleSubmit}>
         Submit
       </button>
-      <button type='submit' className='btn' onClick={handleAlreadyUserSubmit}>
-        Already a user?
-      </button>
     </div>
   );
 };
 
-export default Register;
+export default Login;
